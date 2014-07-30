@@ -1,0 +1,125 @@
+/*
+	-------------- Interface General ---------------
+ */
+html,body{ 
+	background: url(../images/patterns/pattern1.png); 
+	font-family: Calibri, Arial, sans-serif;
+	color: #fff;
+	margin: 0;
+	padding: 0;
+}
+header{ 
+	font-size: 1em; text-align: center; 
+	background: url(../images/patterns/pattern2.png);
+	width: 100%;
+	padding: 15px 0;
+	color: #333;
+	font-size: 1.5em;
+}
+
+footer{ 
+	font-size: 1em;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+	background: rgba( 242, 242, 242, .5 );
+	padding: 10px 0px;
+}
+
+section{
+	width: 1024px;
+	height: 626px;
+	background: url(../images/field.png) center center no-repeat;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -313px 0 0 -512px;
+	-webkit-border-radius: 50px 5px;
+	-moz-border-radius: 50px 5px;
+	border-radius: 50px 5px;
+	overflow: hidden;
+}
+
+a{ color: #c0392b; text-decoration: none; }
+a:hover,
+a:active { color: #333; }
+
+button {
+	position: relative;
+	border: none;
+	padding: 0.6em 1.2em;
+	background: #705097;
+	color: #fff;
+	font-size: 1em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	cursor: pointer;
+	display: inline-block;
+	margin: 3px 2px;
+	border-radius: 2px;
+	
+}
+
+button:hover {
+	background: #63438c;
+}
+
+
+/*
+	-------------- Elementos del juego ---------------
+ */
+
+/*Primera posicion del background: Sprite 0px,-120px, -240px, -360px*/
+#robot, 
+#evilMinion, 
+#explosion1, 
+#explosion2,
+#explosion3,
+#explosion4,
+#explosion5{ position: absolute; width: 120px; height: 120px; }
+
+#robot{
+	background: url(../images/spriteRobot.png) 0px 0px no-repeat;
+	top: 50px;
+	left: 233px;
+}
+
+.shot{
+	position: absolute;
+	width: 140px;
+	height: 120px;
+	left: 335px;
+	background: url(../images/spriteShoot.png) left center no-repeat;
+	top: 62px;
+	z-index: 9;
+}
+
+#evilMinion{
+	background: url(../images/evil.png) center center no-repeat;
+	top: 50px;
+	left: 875px;
+	z-index: 10;
+}
+
+.explo{ left: 875px; background: url(../images/explosion.png) center center no-repeat; display: none;}
+#explosion1{ top: 50px; }
+#explosion2{ top: 150px; }
+#explosion3{ top: 250px; }
+#explosion4{ top: 350px; }
+#explosion5{ top: 450px; }
+
+#crono{ 
+	position: absolute; 
+	left: 863px; 
+	top: 568px; width: 100px; height: 45px; font-size: 2.5em; 
+	color: #85c56b; font-weight: bold;
+	background: #468e2a;
+	padding: 5px;
+	-webkit-border-radius: 5px 25px;
+	-moz-border-radius: 5px 25px;
+	border-radius: 5px 25px;
+	text-shadow: 0px 1px 2px #000;
+}
+
+#resultados, #reiniciarJuego{ display: none; }

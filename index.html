@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Robot vs minions</title>
+	<link rel="stylesheet" href="css/game.css" />
+	<link rel="stylesheet" href="css/component.css" />
+
+	<link type="image/x-icon" href="images/icons/game.ico" rel="icon" />
+ 	<link type="image/x-icon" href="images/icons/game.ico" rel="shortcut icon" />
+</head>
+
+<body>
+	
+	<!-- Encabezado principal -->
+	<header>
+		Robot vs Minions
+	</header>
+
+	<!-- Seccion principal, desarrollo del juego -->
+	<section>
+		
+		<!-- Insertando Robot -->
+		<div id="robot"></div>
+
+		<!-- Insertando evil-minion -->
+		<div id="evilMinion"></div>
+		
+		<!-- Explosiones -->
+		<div id="explosion1" class="explo"></div>
+		<div id="explosion2" class="explo"></div>
+		<div id="explosion3" class="explo"></div>
+		<div id="explosion4" class="explo"></div>
+		<div id="explosion5" class="explo"></div>
+
+		<!-- Cronometro -->
+		<div id="crono">00:00</div>
+
+	</section>
+
+	<footer>
+		<button class="md-trigger" data-modal="modal-12">Instrucciones</button>
+		<button id="iniciarJuego">Iniciar Juego</button>
+		<button id="resultados" class="md-trigger" data-modal="modal-13">Resultados</button>
+		<button id="reiniciarJuego">Reiniciar juego</button>
+	</footer>
+	
+	<!-- Instrucciones -->
+	<div class="md-modal md-effect-12" id="modal-12">
+		<div class="md-content">
+			<h3>Instrucciones</h3>
+			<div>
+				<p>Evil Minion es muy escurridizo, derrotalo disparandole tantas veces sea necesario, demuestra que eres el mejor en este juego de habilidad y destreza.</p>
+				<ul>
+					<li><strong>Movimiento:</strong> Utiliza las teclas arriba <img src="images/up.png" /> o abajo <img src="images/down.png" /> para mover el Robot </li>
+					<li><strong>Disparo:</strong> Para disparar presiona la tecla barra espaciadora <img src="images/barSpace.png" />,debes esperar 2 segundos para volver a disparar.</li>
+					<li><strong>Atención:</strong> Evil Minion puede cambiar de velocidad cada vez que suba y baje.</li>
+					<li><strong>Limite:</strong> Tienes 1 minito para acertar, veamos que tan buena punteria tienes.</li>
+					<li><strong>Iniciar Juego:</strong> Debes presionar iniciar juego en la parte inferior de la pantalla</li>
+					<li><strong>Resultado:</strong> Este boton aparece en la parte inferior del juego, una vez que se ha terminado el tiempo, presionalo.</li>
+				</ul>
+				<button class="md-close">Cerrar!</button>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Resultados -->
+	<div class="md-modal md-effect-12" id="modal-13">
+		<div class="md-content">
+			<h3>Juego finalizado</h3>
+			<div>
+				<p>Felicidades has terminado con tu misión, aqui estan los resultados, compara con tus amigos!!.</p>
+				<ul>
+					<li><strong>Disparos realizados:</strong> <span id="noDisparos"></span> </li>
+					<li><strong>Minions Derrotados:</strong> <span id="noAciertos"></span> </li>
+				</ul>
+				<button class="md-close">Cerrar!</button>
+			</div>
+		</div>
+	</div>
+	<div class="md-overlay"></div><!-- el overlay -->
+	
+	<!-- Libreria jquery y efectos easing -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.ui.effect.min.js"></script>
+
+	<!-- Script principal del juego -->
+	<script src="js/game.js"></script>
+	
+	<!-- Libreria para el uso de la ventana modal -->
+	<script src="js/classie.js"></script>
+	<script src="js/modalEffects.js"></script>
+	
+</body>
+</html>
